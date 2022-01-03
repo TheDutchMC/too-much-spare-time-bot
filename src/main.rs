@@ -115,7 +115,7 @@ mod serenity {
             })
             .group(&GENERAL_GROUP);
 
-        let mut client = Client::builder(&config.discord.token)
+        let mut client = Client::builder(&config.discord.token.unwrap())
             .event_handler(Handler {
                 data: prog_data.clone(),
             })
