@@ -1,0 +1,32 @@
+[package]
+name = "too-much-spare-time"
+version = "0.1.0"
+edition = "2021"
+authors = ["Tobias de Bruijn"]
+
+[dependencies]
+structopt = "0.3.25"
+mysql = "22.0.0"
+serde_yaml = "0.8.23"
+log = "0.4.14"
+env_logger = "0.9.0"
+serenity = "0.10.9"
+anyhow = "1.0.52"
+
+[dependencies.serde]
+version = "1.0.133"
+features = ["derive"]
+
+[dependencies.tokio]
+version = "1.15.0"
+default-features = false
+features = ["rt", "rt-multi-thread"]
+
+[dependencies.refinery]
+version = "0.8.1"
+default-features = false
+features = ["mysql"]
+
+[patch.crates-io.refinery-core]
+git = "https://github.com/TheDutchMC/refinery"
+rev = "26249fa"
